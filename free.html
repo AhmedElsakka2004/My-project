@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Browser Tab Title -->
+  <title>Ahmed El Sakka | AI & Software Engineer</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            dark: {
+              bg: '#090D16',
+              card: '#111827',
+              border: '#1F2937',
+              muted: '#9CA3AF'
+            },
+            accent: {
+              cyan: '#06B6D4',
+              indigo: '#6366F1',
+              violet: '#8B5CF6',
+              emerald: '#10B981'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-bg text-slate-100 font-sans antialiased selection:bg-accent-indigo selection:text-white">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-dark-bg/80 backdrop-blur-xl border-b border-dark-border">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="text-xl font-extrabold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan to-accent-indigo">
+        AHMED<span class="text-white">.DEV</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-dark-muted">
+        <a href="#about" class="hover:text-accent-cyan transition-colors">About</a>
+        <a href="#skills" class="hover:text-accent-cyan transition-colors">Skills</a>
+        <a href="#education" class="hover:text-accent-cyan transition-colors">Education</a>
+        <a href="#projects" class="hover:text-accent-cyan transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-accent-cyan transition-colors text-white">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden md:flex items-center space-x-3">
+        <!-- LinkedIn Link -->
+        <a href="https://linkedin.com/in/ahmed-elsakka-15847a292" target="_blank" class="p-2 text-slate-300 hover:text-accent-cyan border border-dark-border hover:border-accent-cyan rounded-full transition-all" title="LinkedIn Profile">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+
+        <!-- View CV Button -->
+        <a href="https://drive.google.com/file/d/16cisFp5RxPA11TA72YUNTReLY3VZTtD8/view?usp=drivesdk" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-accent-cyan border border-accent-cyan rounded-full hover:bg-accent-cyan/10 transition-all">
+          <span>📄</span>
+          <span>View CV</span>
+        </a>
+
+        <a href="https://wa.me/201212733294" target="_blank" class="inline-flex items-center px-4 py-2 text-xs font-bold text-slate-900 bg-gradient-to-r from-accent-cyan to-accent-indigo hover:opacity-90 rounded-xl transition-all shadow-lg shadow-accent-cyan/20 uppercase tracking-widest">
+          Get In Touch
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-dark-card border-b border-dark-border px-6 py-6 space-y-4 font-semibold text-sm text-dark-muted">
+      <a href="#about" class="block hover:text-accent-cyan">About</a>
+      <a href="#skills" class="block hover:text-accent-cyan">Skills</a>
+      <a href="#education" class="block hover:text-accent-cyan">Education</a>
+      <a href="#projects" class="block hover:text-accent-cyan">Projects</a>
+      <a href="#contact" class="block hover:text-accent-cyan">Contact</a>
+      <a href="https://linkedin.com/in/ahmed-elsakka-15847a292" target="_blank" class="block text-center py-2 text-xs font-bold text-slate-300 border border-dark-border rounded-xl">
+        LinkedIn Profile ↗
+      </a>
+      <a href="https://drive.google.com/file/d/16cisFp5RxPA11TA72YUNTReLY3VZTtD8/view?usp=drivesdk" target="_blank" class="block text-center py-2.5 text-xs font-bold text-accent-cyan border border-accent-cyan rounded-full">
+        📄 View CV
+      </a>
+      <a href="https://wa.me/201212733294" target="_blank" class="block text-center py-3 text-xs font-bold text-slate-900 bg-accent-cyan rounded-xl">
+        Contact via WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="about" class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-indigo/10 rounded-full blur-[120px] -z-10"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dark-card border border-dark-border text-xs font-semibold text-accent-cyan">
+          <span class="w-2 h-2 rounded-full bg-accent-emerald animate-ping"></span>
+          <span>Open for AI & Engineering Roles</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-none">
+          Building <span class="bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan via-accent-indigo to-accent-violet">Intelligent</span> Web & AI Systems.
+        </h1>
+
+        <p class="text-dark-muted text-base sm:text-lg leading-relaxed max-w-2xl">
+          Hi, I'm <strong class="text-white">Ahmed El Sakka</strong>. A Software Engineer specializing in Full-Stack Development and Computer Vision / Deep Learning integrations.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <!-- View CV Button -->
+          <a href="https://drive.google.com/file/d/16cisFp5RxPA11TA72YUNTReLY3VZTtD8/view?usp=drivesdk" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-accent-cyan border border-accent-cyan rounded-full hover:bg-accent-cyan/10 transition-all">
+            <span>📄</span>
+            <span>View CV</span>
+          </a>
+
+          <!-- LinkedIn Button -->
+          <a href="https://linkedin.com/in/ahmed-elsakka-15847a292" target="_blank" class="px-6 py-3 text-xs font-bold text-slate-300 bg-dark-card hover:bg-slate-800 border border-dark-border rounded-xl transition-all flex items-center gap-2">
+            <svg class="w-4 h-4 fill-accent-cyan" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://wa.me/201212733294" target="_blank" class="px-6 py-3 text-xs font-bold text-white bg-accent-emerald hover:bg-emerald-600 rounded-xl transition-all shadow-lg shadow-emerald-900/20 flex items-center gap-2 uppercase tracking-wider">
+            <span>WhatsApp Direct</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Developer Profile Card with User Photo -->
+      <div class="md:col-span-5">
+        <div class="p-8 rounded-3xl bg-dark-card/60 border border-dark-border backdrop-blur-md shadow-2xl space-y-6">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-accent-cyan">&lt;DeveloperProfile /&gt;</span>
+            <span class="w-3 h-3 rounded-full bg-accent-emerald"></span>
+          </div>
+
+          <!-- Profile Photo & Header Details -->
+          <div class="flex items-center gap-4">
+            <div class="relative w-20 h-20 rounded-2xl p-1 bg-gradient-to-tr from-accent-cyan to-accent-indigo shrink-0">
+              <img src="profile.jpg" alt="Ahmed Mohamed El Sakka" class="w-full h-full object-cover rounded-xl" />
+            </div>
+            <div class="space-y-1">
+              <h3 class="text-xl font-bold text-white">Ahmed Mohamed El Sakka</h3>
+              <p class="text-xs text-dark-muted">Faculty of Computer and Information</p>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-4 border-t border-dark-border">
+            <div class="flex justify-between text-xs">
+              <span class="text-dark-muted">Specialization</span>
+              <span class="font-semibold text-slate-200">AI & Web Engineering</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-dark-muted">Phone / WhatsApp</span>
+              <span class="font-semibold text-slate-200">01212733294</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-dark-muted">Email</span>
+              <span class="font-semibold text-slate-200 truncate max-w-[180px]" title="mo6547789890@gmail.com">mo6547789890@gmail.com</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-dark-muted">LinkedIn</span>
+              <a href="https://linkedin.com/in/ahmed-elsakka-15847a292" target="_blank" class="font-semibold text-accent-cyan hover:underline">ahmed-elsakka</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Matrix -->
+  <section id="skills" class="py-16 border-t border-dark-border bg-dark-card/30">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-10">
+        <span class="text-xs font-bold text-accent-cyan uppercase tracking-widest">Capabilities</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Technical Expertise</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-dark-card border border-dark-border space-y-3">
+          <div class="text-accent-cyan text-xl font-black">01</div>
+          <h3 class="text-base font-bold text-white">Computer Vision & AI</h3>
+          <p class="text-xs text-dark-muted leading-relaxed">
+            Developing CNN models, image processing pipelines, and generative AI API integrations.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-dark-card border border-dark-border space-y-3">
+          <div class="text-accent-indigo text-xl font-black">02</div>
+          <h3 class="text-base font-bold text-white">Full-Stack Web</h3>
+          <p class="text-xs text-dark-muted leading-relaxed">
+            Building responsive frontend platforms and scalable Node.js/Express backends connected to databases.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-dark-card border border-dark-border space-y-3">
+          <div class="text-accent-violet text-xl font-black">03</div>
+          <h3 class="text-base font-bold text-white">Software Architecture</h3>
+          <p class="text-xs text-dark-muted leading-relaxed">
+            Designing clean REST APIs, interactive Java desktop tools, and robust data pipeline workflows.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-20 border-t border-dark-border">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <span class="text-xs font-bold text-accent-cyan uppercase tracking-widest">Academic Background</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Education & Qualifications</h2>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Education Card 1 -->
+        <div class="p-8 rounded-3xl bg-dark-card border border-dark-border hover:border-accent-cyan/50 transition-all flex flex-col md:flex-row justify-between md:items-center gap-6">
+          <div class="space-y-2">
+            <span class="px-3 py-1 text-[10px] font-bold text-accent-cyan bg-accent-cyan/10 rounded-full uppercase">Bachelor Degree</span>
+            <h3 class="text-xl font-bold text-white">Bachelor of Science in Computer and Information</h3>
+            <p class="text-xs text-dark-muted">Arab Open University (In partnership with The Open University, UK)</p>
+          </div>
+          <div class="flex items-center gap-3 text-xs font-semibold text-slate-300 bg-dark-bg px-4 py-2.5 rounded-xl border border-dark-border self-start md:self-center">
+            <span>🎓 Status: Graduated</span>
+          </div>
+        </div>
+
+        <!-- Education Card 2 (Initiatives / Training) -->
+        <div class="p-8 rounded-3xl bg-dark-card border border-dark-border hover:border-accent-indigo/50 transition-all flex flex-col md:flex-row justify-between md:items-center gap-6">
+          <div class="space-y-2">
+            <span class="px-3 py-1 text-[10px] font-bold text-accent-indigo bg-accent-indigo/10 rounded-full uppercase">Specialized Program</span>
+            <h3 class="text-xl font-bold text-white">Digital Egypt Pioneers Initiative (DEPI)</h3>
+            <p class="text-xs text-dark-muted">AI & Data Science – Machine Learning Track | Ministry of Communications & IT (MCIT)</p>
+          </div>
+          <div class="flex items-center gap-3 text-xs font-semibold text-slate-300 bg-dark-bg px-4 py-2.5 rounded-xl border border-dark-border self-start md:self-center">
+            <span>⚡ Practical Training</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 border-t border-dark-border bg-dark-card/30">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <span class="text-xs font-bold text-accent-cyan uppercase tracking-widest">Work Portfolio</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Featured Projects</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Project 1: Plant Detect Website -->
+        <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-5 hover:border-accent-cyan/50 transition-all group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <span class="text-[10px] font-bold text-accent-cyan bg-accent-cyan/10 px-3 py-1 rounded-full uppercase">AI WEBSITE</span>
+              <span class="text-xs font-mono text-emerald-400">Graduation Project (B+)</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white group-hover:text-accent-cyan transition-colors">Plant Detect Platform</h3>
+            
+            <p class="text-xs text-dark-muted leading-relaxed">
+              An intelligent AI-powered Website built to classify plant leaf diseases using Convolutional Neural Networks (CNNs). Integrated with Google Gemini API to generate instant, bilingual treatment reports.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-dark-border">
+            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">CNN / Deep Learning</span>
+            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Python</span>
+            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Node.js</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Elite Booking -->
+        <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-5 hover:border-accent-violet/50 transition-all group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <span class="text-[10px] font-bold text-accent-violet bg-accent-violet/10 px-3 py-1 rounded-full uppercase">Full-Stack Web</span>
+              <span class="text-xs font-mono text-slate-400">Web Project</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white group-hover:text-accent-violet transition-colors">Elite Booking Platform</h3>
+            
+            <p class="text-xs text-dark-muted leading-relaxed">
+              A responsive, user-centric web reservation platform featuring automated reservation workflows, dynamic scheduling, and client-side DOM validation logic.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-dark-border">
+            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">JavaScript</span>
+            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">HTML5/CSS3</span>
+            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Interactive 2D Graphics Canvas Engine -->
+        <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-5 hover:border-emerald-500/50 transition-all group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <span class="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full uppercase">Desktop Systems</span>
+              <span class="text-xs font-mono text-slate-400">Java Graphics</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">2D Interactive Canvas Engine</h3>
+            
+            <p class="text-xs text-dark-muted leading-relaxed">
+              An interactive desktop canvas built with Java Graphics2D, Swing, and AWT to simulate frame-by-frame 2D vector animations, text outlining, and complex geometric transformations.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-dark-border">
+            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Java</span>
+            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Graphics2D</span>
+            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Swing / AWT</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 border-t border-dark-border">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12 text-center max-w-2xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-accent-cyan uppercase tracking-widest">Get In Touch</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Let's Work Together</h2>
+        <p class="text-xs sm:text-sm text-dark-muted">
+          Feel free to reach out for project inquiries, collaboration opportunities, or technical roles.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- Phone / WhatsApp Box -->
+        <a href="https://wa.me/201212733294" target="_blank" class="p-8 rounded-3xl bg-dark-card border border-dark-border hover:border-accent-emerald transition-all flex items-center gap-5 group">
+          <div class="w-14 h-14 rounded-2xl bg-accent-emerald/10 text-accent-emerald flex items-center justify-center shrink-0 group-hover:bg-accent-emerald group-hover:text-slate-900 transition-all">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <div class="space-y-1">
+            <span class="text-xs font-bold text-dark-muted uppercase tracking-wider">Phone & WhatsApp</span>
+            <h3 class="text-lg font-bold text-white group-hover:text-accent-emerald transition-colors">01212733294</h3>
+            <p class="text-xs text-emerald-400">Click to chat on WhatsApp →</p>
+          </div>
+        </a>
+
+        <!-- Email Box -->
+        <a href="mailto:mo6547789890@gmail.com" class="p-8 rounded-3xl bg-dark-card border border-dark-border hover:border-accent-cyan transition-all flex items-center gap-5 group">
+          <div class="w-14 h-14 rounded-2xl bg-accent-cyan/10 text-accent-cyan flex items-center justify-center shrink-0 group-hover:bg-accent-cyan group-hover:text-slate-900 transition-all">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div class="space-y-1 overflow-hidden">
+            <span class="text-xs font-bold text-dark-muted uppercase tracking-wider">Direct Email</span>
+            <h3 class="text-sm sm:text-base font-bold text-white group-hover:text-accent-cyan transition-colors truncate" title="mo6547789890@gmail.com">mo6547789890@gmail.com</h3>
+            <p class="text-xs text-accent-cyan">Click to send email →</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-dark-border text-center text-xs text-dark-muted space-y-2">
+    <p>© 2026 Ahmed El Sakka. All rights reserved.</p>
+    <div class="flex justify-center space-x-4 pt-1">
+      <a href="https://linkedin.com/in/ahmed-elsakka-15847a292" target="_blank" class="text-accent-cyan hover:underline">LinkedIn</a>
+      <span>•</span>
+      <span>Phone: 01212733294</span>
+      <span>•</span>
+      <span>Email: mo6547789890@gmail.com</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
