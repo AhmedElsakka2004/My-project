@@ -111,7 +111,7 @@
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-indigo/10 rounded-full blur-[120px] -z-10"></div>
     
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
-      <div class="md:col-span-7 space-y-6">
+      <div class="md:col-span-6 space-y-6">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dark-card border border-dark-border text-xs font-semibold text-accent-cyan">
           <span class="w-2 h-2 rounded-full bg-accent-emerald animate-ping"></span>
           <span>Open for AI & Engineering Roles</span>
@@ -146,26 +146,26 @@
         </div>
       </div>
 
-      <!-- Right Column: Developer Profile Card with User Photo -->
-      <div class="md:col-span-5">
-        <div class="p-8 rounded-3xl bg-dark-card/60 border border-dark-border backdrop-blur-md shadow-2xl space-y-6">
-          <div class="flex items-center justify-between">
+      <!-- Right Column: Developer Profile Card (صورة بحجم 400px - Large View) -->
+      <div class="md:col-span-6 flex justify-center">
+        <div class="p-8 rounded-3xl bg-dark-card/60 border border-dark-border backdrop-blur-md shadow-2xl space-y-6 flex flex-col items-center text-center w-full max-w-[460px]">
+          <div class="flex items-center justify-between w-full">
             <span class="text-xs font-mono text-accent-cyan">&lt;DeveloperProfile /&gt;</span>
             <span class="w-3 h-3 rounded-full bg-accent-emerald"></span>
           </div>
 
-          <!-- Profile Photo & Header Details -->
-          <div class="flex items-center gap-4">
-            <div class="relative w-20 h-20 rounded-2xl p-1 bg-gradient-to-tr from-accent-cyan to-accent-indigo shrink-0">
-              <img src="profile.jpg" alt="Ahmed Mohamed El Sakka" class="w-full h-full object-cover rounded-xl" />
+          <!-- Profile Photo (تكبير إلى 400px) -->
+          <div class="flex flex-col items-center gap-4 w-full">
+            <div class="relative w-[400px] max-w-full h-[400px] rounded-3xl p-2 bg-gradient-to-tr from-accent-cyan via-accent-indigo to-accent-violet shrink-0 shadow-2xl shadow-accent-cyan/20">
+              <img src="profile.jpg" alt="Ahmed Mohamed El Sakka" class="w-full h-full object-cover rounded-2xl" />
             </div>
-            <div class="space-y-1">
-              <h3 class="text-xl font-bold text-white">Ahmed Mohamed El Sakka</h3>
+            <div class="space-y-1 mt-2">
+              <h3 class="text-2xl font-bold text-white">Ahmed Mohamed El Sakka</h3>
               <p class="text-xs text-dark-muted">Faculty of Computer and Information</p>
             </div>
           </div>
 
-          <div class="space-y-3 pt-4 border-t border-dark-border">
+          <div class="space-y-3 pt-4 border-t border-dark-border w-full text-left">
             <div class="flex justify-between text-xs">
               <span class="text-dark-muted">Specialization</span>
               <span class="font-semibold text-slate-200">AI & Web Engineering</span>
@@ -176,7 +176,7 @@
             </div>
             <div class="flex justify-between text-xs">
               <span class="text-dark-muted">Email</span>
-              <span class="font-semibold text-slate-200 truncate max-w-[180px]" title="mo6547789890@gmail.com">mo6547789890@gmail.com</span>
+              <span class="font-semibold text-slate-200 truncate max-w-[200px]" title="mo6547789890@gmail.com">mo6547789890@gmail.com</span>
             </div>
             <div class="flex justify-between text-xs">
               <span class="text-dark-muted">LinkedIn</span>
